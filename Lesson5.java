@@ -43,7 +43,7 @@ public class Lesson5 {
         phanLoaiTamGiac();
     }
 
-    private static void phuongTrinhBacNhat () {
+    private static void phuongTrinhBacNhat() {
         double a, b;
         System.out.print("Nhap a: ");
         a = in.nextDouble();
@@ -57,11 +57,11 @@ public class Lesson5 {
                 System.out.println("Phuong trinh vo nghiem");
             }
         } else {
-            System.out.println("Nghiem phuong trinh x = " + -b/a);
+            System.out.println("Nghiem phuong trinh x = " + -b / a);
         }
     }
 
-    private static void phuongTrinhBacHai () {
+    private static void phuongTrinhBacHai() {
         double a, b, c;
 
         System.out.print("Nhap a: ");
@@ -71,32 +71,32 @@ public class Lesson5 {
         System.out.print("Nhap c: ");
         c = in.nextDouble();
 
-        double delta = b*b - 4*a*c;
+        double delta = b * b - 4 * a * c;
 
         if (delta < 0) {
             System.out.println("Phuong trinh vo nghiem");
         } else if (delta == 0) {
-            System.out.println("Phuong trinh co nghiem kep: x1 = x2 = " + -b/(2*a));
+            System.out.println("Phuong trinh co nghiem kep: x1 = x2 = " + -b / (2 * a));
         } else {
             System.out.println("Phuong trinh co 2 nghiem: ");
-            System.out.println("x1 = " + (-b+Math.sqrt(delta))/(2*a));
-            System.out.println("x2 = " + (-b-Math.sqrt(delta))/(2*a));
+            System.out.println("x1 = " + (-b + Math.sqrt(delta)) / (2 * a));
+            System.out.println("x2 = " + (-b - Math.sqrt(delta)) / (2 * a));
         }
     }
 
-    private static void soNgayCuaNam () {
+    private static void soNgayCuaNam() {
         System.out.print("Nhap nam: ");
         int n;
         n = in.nextInt();
 
-        if (n % 400 == 0 || (n%4==0 && n%100!=0)) {
+        if (n % 400 == 0 || (n % 4 == 0 && n % 100 != 0)) {
             System.out.println(366);
         } else {
             System.out.println(365);
         }
     }
 
-    private static void soLonNhatVaBeNhat () {
+    private static void soLonNhatVaBeNhat() {
         int a, b, c, d;
 
         System.out.print("Nhap so thu 1: ");
@@ -111,21 +111,21 @@ public class Lesson5 {
         System.out.print("Nhap so thu 4: ");
         d = in.nextInt();
 
-        int t1 = Math.max(a,b);
-        int t2 = Math.max(c,d);
+        int t1 = Math.max(a, b);
+        int t2 = Math.max(c, d);
 
         System.out.println("So lon nhat = " + Math.max(t1, t2));
 
-        t1 = Math.min(a,b);
-        t2 = Math.min(c,d);
+        t1 = Math.min(a, b);
+        t2 = Math.min(c, d);
 
-        System.out.println("So be nhat = " + Math.min(t1,t2));
+        System.out.println("So be nhat = " + Math.min(t1, t2));
     }
 
     private static double dienTichTamGiac(double a, double b, double c) {
-        double p = (a+b+c)/2;
+        double p = (a + b + c) / 2;
 
-        return (Math.sqrt(p*(p-a)*(p-b)*(p-c)));
+        return (Math.sqrt(p * (p - a) * (p - b) * (p - c)));
     }
 
     private static void kiemTraDieuKienTamGiac() {
@@ -140,15 +140,15 @@ public class Lesson5 {
         System.out.print("Nhap c: ");
         c = in.nextDouble();
 
-        if (a+b>c && b+c>a && c+a>b) {
+        if (a + b > c && b + c > a && c + a > b) {
             System.out.println("3 canh co the tao ra tam giac");
-            System.out.println("Dien tich tam giac = " + dienTichTamGiac(a,b,c));
+            System.out.println("Dien tich tam giac = " + dienTichTamGiac(a, b, c));
         } else {
             System.out.println("3 canh nhap vao ko the tao nen tam giac");
         }
     }
 
-    private static void khoangCachGiuaHaiDiem(){
+    private static void khoangCachGiuaHaiDiem() {
         double x1, y1, x2, y2;
 
         System.out.print("x1 = ");
@@ -161,13 +161,13 @@ public class Lesson5 {
         System.out.print("y2 = ");
         y2 = in.nextDouble();
 
-        double dx = x1-x2;
-        double dy = y1-y2;
+        double dx = x1 - x2;
+        double dy = y1 - y2;
 
-        System.out.println("Khoang cach = " + Math.sqrt(dx*dx + dy*dy));
+        System.out.println("Khoang cach = " + Math.sqrt(dx * dx + dy * dy));
     }
 
-    private static void kiemTraThuocHinhTron () {
+    private static void kiemTraThuocHinhTron() {
         double x, y;
         System.out.print("x = ");
         x = in.nextDouble();
@@ -175,7 +175,7 @@ public class Lesson5 {
         System.out.print("y = ");
         y = in.nextDouble();
 
-        double kc = Math.sqrt(x*x + y*y);
+        double kc = Math.sqrt(x * x + y * y);
         if (kc <= 1) {
             System.out.println("Diem nam trong hinh tron R(O, 1) voi O(0,0)");
         } else {
@@ -208,13 +208,13 @@ public class Lesson5 {
         char op = in.next().charAt(0);
 
         if (op == '+') {
-            System.out.println("a + b = " + (a+b));
+            System.out.println("a + b = " + (a + b));
         } else if (op == '-') {
-            System.out.println("a + b = " + (a-b));
+            System.out.println("a + b = " + (a - b));
         } else if (op == '*') {
-            System.out.println("a + b = " + (a*b));
+            System.out.println("a + b = " + (a * b));
         } else if (op == '/') {
-            System.out.println("a + b = " + ((float)a/b));
+            System.out.println("a + b = " + ((float) a / b));
         } else {
             System.out.println("Phep toan ko hop le!");
         }
@@ -227,7 +227,7 @@ public class Lesson5 {
         if (n <= 0 && n > 31) {
             System.out.println("Ngay ko hop le");
         } else {
-            int t = n%7;
+            int t = n % 7;
             switch (t) {
                 case 0:
                     System.out.println("Thu 6");
@@ -259,19 +259,20 @@ public class Lesson5 {
         System.out.print("Nhap luong dien tieu thu: ");
         n = in.nextInt();
 
-        int donGia[] = {550, 850, 1200, 1500};
-        int i=0;
+        int[] donGia = {550, 850, 1200, 1500};
+        int[] triSo = {50, 50, 100};
+        int i = 0;
 
         int sum = 0;
 
-        while (n>0) {
-            if (n >= 50 && i < donGia.length - 1) {
-                sum += (donGia[i] * 50);
+        while (n > 0) {
+            if (i < donGia.length - 1 && n >= triSo[i]) {
+                sum += (donGia[i] * triSo[i]);
             } else {
                 sum += (donGia[i] * n);
                 break;
             }
-            n -= 50;
+            n -= triSo[i];
             i++;
         }
 
@@ -290,14 +291,14 @@ public class Lesson5 {
         boolean vuong = false;
         boolean deu = false;
 
-        if (a==c || b==c || c==a) {
+        if (a == c || b == c || c == a) {
             can = true;
-            if (a==b && a==c && b==c) {
+            if (a == b && a == c && b == c) {
                 deu = true;
             }
         }
 
-        if ((a*a + b*b == c*c) || (b*b + c*c == a*a) || (c*c + a*a == b*b)) {
+        if ((a * a + b * b == c * c) || (b * b + c * c == a * a) || (c * c + a * a == b * b)) {
             vuong = true;
         }
 
